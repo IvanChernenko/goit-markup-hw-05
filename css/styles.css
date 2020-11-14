@@ -63,8 +63,8 @@ address {
 }
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-border {
@@ -100,6 +100,7 @@ address {
 
 .menu {
   display: inline-flex;
+  padding-bottom: 28px;
 }
 
 .menu-item:not(:last-child) {
@@ -132,6 +133,7 @@ address {
 }
 
 .current-page {
+  position: relative;
   text-decoration: none;
   font-family: Roboto;
   font-weight: 500;
@@ -140,9 +142,23 @@ address {
   letter-spacing: 0.02em;
   color: var(--accent-cl);
 }
+
 .current-page:hover,
 .current-page:focus {
   color: var(--black);
+}
+
+.current-page::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-cl);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0px;
 }
 
 .link-logo {
@@ -182,6 +198,25 @@ address {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--black);
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 28px;
+}
+
+.menu-link:hover::after,
+.menu-link:focus::after {
+  color: var(--accent-cl);
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-cl);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 28px;
+  bottom: 0px;
 }
 
 .item {
@@ -293,6 +328,54 @@ address {
   background-color: var(--accent-cl);
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+  max-width: 528px;
+  height: 581px;
+  background-color: var(--white);
+  padding: 80px 40px;
+  transition: transform 0.5s;
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  /* background-image: url(//img/Vector.png); */
+  background-size: auto;
+  background-position: contain;
+  margin-top: 8px;
+  margin-bottom: 2px;
+  padding: 0;
+}
+
 .heading {
   font-family: Roboto;
   font-weight: bold;
@@ -356,7 +439,33 @@ address {
 .duties-box {
   width: calc((100%-60px) / 3);
   margin-right: 30px;
+  position: relative;
+  display: flex;
 }
+
+.img {
+  display: block;
+}
+
+.duties-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding-top: 27px;
+  padding-bottom: 27px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 .item-title {
   font-family: Roboto;
   font-weight: bold;
@@ -607,6 +716,47 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.prtf {
+  position: relative;
+}
+
+.prtf:hover p,
+.prtf:hover::after {
+  opacity: 1;
+}
+
+.prtf::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  z-index: 1;
+  opacity: 0;
+}
+
+.prtf-p {
+  display: block;
+  width: 322px;
+  height: 168px;
+  margin: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
 }
 
 .img-portfolio {

@@ -53,7 +53,7 @@
           <h1 class="title">
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ </br> ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
-          <button class="btn" type="button">Заказать услугу</button>
+          <button class="btn" type="button" data-modal-open>Заказать услугу</button>
       </div>
       </section>
 
@@ -118,10 +118,12 @@
         <h2 class="item-title">Чем мы занимаемся</h2>
          <ul class="list flexbox">
           <li class="duties-box">
-            <img src="./img/programer.jpg" alt="Programer working his desk"
+            <h3 class="duties-title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
+            <img class="img" src="./img/programer.jpg"  alt="Programer working his desk"
               width="370"/>
           </li>
           <li class="duties-box">
+            <h3 class="duties-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
             <img
               src="./img/smartphone.jpg"
               alt="Smartphone application"
@@ -129,6 +131,7 @@
             />
           </li>
           <li class="duties-box">
+            <h3 class="duties-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
             <img
               src="./img/graphic-tablet.jpg"
               alt="Colour selection graphic tablet"
@@ -431,5 +434,14 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-close" data-modal-close>X</button>
+        <p class="message">Online-запись</p>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
