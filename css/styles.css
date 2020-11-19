@@ -63,6 +63,7 @@ address {
 }
 
 .header {
+  margin: 0;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -81,6 +82,9 @@ address {
 
 .header-container {
   margin: 0;
+  padding-right: 215px;
+  padding-left: 215px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -419,22 +423,31 @@ address {
 
 .btn-close {
   position: absolute;
-  top: 0;
+  top: 8px;
   right: 8px;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  /* background-image: url(//img/Vector.png);
-  background-size: auto;
-  background-position: contain; */
   margin-top: 8px;
   margin-bottom: 2px;
   padding: 0;
   cursor: pointer;
+  background-color: var(--white);
+}
+
+.btn-close-svg {
+  width: 11px;
+  height: 11px;
+  fill: var(--black);
+}
+
+.btn-close-svg:hover,
+.btn-close-svg:focus {
+  fill: var(--accent-cl);
 }
 
 .heading {
@@ -783,14 +796,8 @@ address {
 .prtf-link {
   display: inline-block;
   position: relative;
+  height: 404px;
 }
-
-.prtf-link:focus .prtf::after {
-}
-
-/* .prtf-overlay {
-  position: relative;
-} */
 
 .prtf {
   position: relative;
@@ -823,6 +830,7 @@ address {
 }
 
 .prtf-p {
+  text-decoration: none;
   display: block;
   width: 322px;
   height: 168px;
