@@ -439,15 +439,15 @@ address {
   background-color: var(--white);
 }
 
+.btn-close:hover .btn-close-svg,
+.btn-close:focus .btn-close-svg {
+  fill: var(--accent-cl);
+}
+
 .btn-close-svg {
   width: 11px;
   height: 11px;
   fill: var(--black);
-}
-
-.btn-close-svg:hover,
-.btn-close-svg:focus {
-  fill: var(--accent-cl);
 }
 
 .heading {
