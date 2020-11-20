@@ -66,13 +66,18 @@ address {
   margin: 0;
   padding-top: 32px;
   padding-bottom: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1600px;
 }
 
 .header-border {
   padding-top: 24px;
   padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
-  width: 100%;
+  width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .header-portfolio {
