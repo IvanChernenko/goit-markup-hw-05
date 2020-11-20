@@ -432,6 +432,22 @@
           </ul>
          </address>
         </div>
+
+        <div class="submit">
+          <h4 class="join">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h4>
+
+          <ul class="list submit-list">
+            <li class="submit-item">
+              <form class="submit-form">
+                 <input type="email" name="mail" id="mail" placeholder="E-mail" /> 
+              </form>
+            </li>
+            <li>
+              <button class="button-form" type="submit">Подписаться</button>
+            </li>
+          </ul>
+
+        </div>
       </div>
     </footer>
 
@@ -442,7 +458,37 @@
           <use href="./img/symbol-defs.svg#cross"></use>
         </svg>
       </button>
-        <p class="message">Online-запись</p>
+
+      <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="form">
+
+          <div class="form-field">
+            <label for="name" class="form-label">Имя</label>
+            <input class="form-input" type="text" name="name" id="name" />
+          </div>
+          
+          <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel" />
+          </div>
+          
+          <div class="form-field">
+            <label for="mail">Почта</label>
+            <input type="email" name="mail" id="mail" />
+          </div>
+          
+          <div class="comment">
+           <label for="comment">Комментарий</label>
+           <textarea name="comment" id="comment" rows="6" placeholder="Введите текст"></textarea>
+          </div>
+          
+          <div class="form-field">
+            <input type="checkbox" name="agreement" id="agreement" />
+            <label for="agreement">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+          </div>
+
+          <button class="button-form" type="submit">Отправить</button>
+        </form>
       </div>
     </div>
 
