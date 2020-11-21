@@ -792,8 +792,12 @@ address {
 
 .button-form {
   margin-left: 12px;
-  display: block;
-  padding: 10px 55px;
+  display: flex;
+  justify-content: center;
+  padding-left: 29px;
+  padding-right: 8px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   min-width: 200px;
 
   font-family: Roboto;
@@ -808,6 +812,24 @@ address {
   border-radius: 4px;
   background-color: var(--accent-cl);
   cursor: pointer;
+}
+
+.submit-svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  fill: currentColor;
+}
+
+.button-form:hover,
+.button-form:focus {
+  background-color: var(--white);
+  color: var(--accent-cl);
+}
+
+.button-form:hover .submit-svg,
+.button-form:focus .submit-svg {
+  fill: var(--accent-cl);
 }
 
 .portfolio {
@@ -975,6 +997,7 @@ textarea {
   margin-bottom: 28px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .form-field input {
   margin: 0;
@@ -987,6 +1010,15 @@ textarea {
 
 .form-field label {
   margin-bottom: 4px;
+}
+
+.form-label-svg {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 42px;
+  left: 15px;
+  z-index: 2;
 }
 
 .comment {
